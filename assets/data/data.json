@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "soundName": "Reflective Melancholic Piano",
+      "audioFilename": "lolamoore__reflective-melancholic-piano.mp3",
+      "path": "assets/audio/lolamoore__reflective-melancholic-piano.mp3"
+    },
+    {
+      "id": "2",
+      "soundName": "Spooky Beat",
+      "audioFilename": "seth_makes_sounds__spooky-beat.mp3",
+      "path": "assets/audio/seth_makes_sounds__spooky-beat.mp3"
+    },
+    {
+      "id": "3",
+      "soundName": "SITUATION SAMPLE PACK",
+      "audioFilename": "situation-sample-pack.mp3",
+      "path": "assets/audio/situation-sample-pack.mp3"
+    }
+  ]
+}
