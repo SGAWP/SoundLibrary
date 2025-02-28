@@ -1,0 +1,6 @@
+<div class="container">
+  <div *ngIf="data$ | async as audio">
+    <app-table [audio]="audio" (audioSelected)="onAudioSelected($event)"></app-table>
+  </div>
+  <app-player *ngIf="selectedAudio"></app-player>
+</div>

@@ -1,0 +1,19 @@
+<mat-card>
+  <mat-card-title-group>
+    <mat-card-title>SoundLibrary</mat-card-title>
+  </mat-card-title-group>
+  <mat-card-content>
+    <mat-table [dataSource]="audio.data">
+      <ng-container [matColumnDef]="column.value" *ngFor="let column of allCols;">
+        <mat-header-cell *matHeaderCellDef>
+          {{ column.displayName }}
+        </mat-header-cell>
+        <mat-cell *matCellDef="let row" [attr.data-label]="column.displayName" (click)="selectAudio(row)">
+          {{ row[column.value] }}
+        </mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </mat-card-content>  
+</mat-card>

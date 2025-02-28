@@ -1,0 +1,20 @@
+@use '../helpers/mixins' as mixin;
+
+.mat-card {
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px !important;
+}
+
+.mat-card-title {
+  line-height: 1.5;
+  font-size: calc(1rem + 1vw);
+}
+
+mat-card {
+  @include mixin.respond(tablet) {
+    width: 90vw;
+    max-width: 700px;
+    word-break: break-word;
+  }
+}

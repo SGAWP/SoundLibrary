@@ -1,0 +1,77 @@
+@use '../helpers/mixins' as mixin;
+
+mat-table {
+  position: relative;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+mat-table thead,
+mat-header-row {
+  @include mixin.respond(tablet) {
+    visibility: hidden;
+    position: absolute;
+  }
+}
+
+mat-table mat-row {
+  @include mixin.respond(tablet) {
+    border-bottom: 3px solid #dddddd;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+mat-table mat-cell {
+  @include mixin.respond(tablet) {
+    border-bottom: 1px solid #dddddd;
+    text-align: right;
+    display: block;
+    width: 100%;
+  }
+}
+
+.mat-header-cell {
+  font-size: calc(1rem + 1vw);
+}
+
+.mat-cell {
+  font-size: calc(1rem + 0.5vw);
+}
+
+mat-header-cell,
+mat-cell {
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+mat-row mat-cell {
+  cursor: pointer;
+}
+
+mat-row:hover {
+  background-color: #303030;
+}
+
+mat-row:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+mat-row:last-child,
+mat-cell:last-child {
+  border-bottom: 0;
+}
+
+mat-table mat-cell:before {
+  @include mixin.respond(tablet) {
+    content: attr(data-label);
+    color: rgba(255, 255, 255, .7);
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+}

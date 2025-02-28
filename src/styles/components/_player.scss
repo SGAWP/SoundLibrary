@@ -1,0 +1,41 @@
+@use '../helpers/mixins' as mixin;
+
+.control-row {
+  display: flex;
+  gap: 20px;
+
+  @include mixin.respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.control-left {
+  flex: 8;
+  display: flex;
+  align-items: center;
+
+  @include mixin.respond(phone) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.control-right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include mixin.respond(phone) {
+    flex-direction: column;
+  }
+}
+
+.progress-slider {
+  flex: 1;
+  width: 100%;
+}
+
+.volume-slider {
+  width: 100%;
+}
